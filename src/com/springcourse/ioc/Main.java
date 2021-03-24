@@ -25,5 +25,13 @@ public class Main {
 		System.out.println(myBoss.getCompanyName());
 		
 		context.close();
+		
+		context = new ClassPathXmlApplicationContext("application-context-v2.xml");
+		mySecretary = context.getBean("mySecretary", Secretary.class);
+		Secretary mySecretaryV2 = context.getBean("mySecretary", Secretary.class);
+		
+		System.out.println(mySecretary + "-" + mySecretaryV2);
+		
+		context.close();
 	}
 }
