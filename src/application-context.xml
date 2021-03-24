@@ -8,9 +8,12 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
+	<context:property-placeholder location="classpath:employee.properties" />
 	<bean id="myReportBuilder" class="com.springcourse.ioc.builder.ReportBuilderImpl" />
-	<bean id="myEmployee" class="com.springcourse.ioc.model.Boss">
+	<bean id="myBoss" class="com.springcourse.ioc.model.Boss">
 		<constructor-arg ref="myReportBuilder"></constructor-arg>
+		<property name="email" value="${email}" />
+		<property name="companyName" value="${company}" />
 	</bean>
 	
 	<bean id="mySecretary" class="com.springcourse.ioc.model.Secretary">
