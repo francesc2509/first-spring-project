@@ -26,11 +26,22 @@ public class Main {
 		
 		context.close();
 		
+		System.out.println();
 		context = new ClassPathXmlApplicationContext("application-context-v2.xml");
 		mySecretary = context.getBean("mySecretary", Secretary.class);
 		Secretary mySecretaryV2 = context.getBean("mySecretary", Secretary.class);
 		
 		System.out.println(mySecretary + "-" + mySecretaryV2);
+		
+		context.close();
+		
+		System.out.println();
+		context = new ClassPathXmlApplicationContext("application-context-v3.xml");
+		myBoss = context.getBean("myBoss", Boss.class);
+		System.out.println(myBoss.getTasks());
+		System.out.println(myBoss.getReport());
+		System.out.println(myBoss.getEmail());
+		System.out.println(myBoss.getCompanyName());
 		
 		context.close();
 	}

@@ -28,6 +28,14 @@ public class Boss implements Employee {
 		this.reportBuilder = reportBuilder;
 	}
 	
+	public void init() {
+		System.out.println("Initialising bean...");
+	}
+	
+	public void destroy() {
+		System.out.println("Bean destroyed...");
+	}
+	
 	@Override
 	public String getTasks() {
 		return "Lead my employees";
