@@ -1,15 +1,15 @@
 package com.springcourse.ioc;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
 	
 	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+		Employee myEmployee = context.getBean("myEmployee", Employee.class);
 		
-		Employee bossEmployee = new Boss();
-		System.out.println(bossEmployee.getTasks());
+		System.out.println(myEmployee.getTasks());
 		
-		Employee secretary = new Secretary();
-		System.out.println(secretary.getTasks());
-		
-		Employee director = new Director();
-		System.out.println(director.getTasks());
+		context.close();
 	}
 }
