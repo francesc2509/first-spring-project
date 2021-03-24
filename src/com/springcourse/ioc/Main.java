@@ -9,6 +9,7 @@ public class Main {
 		Employee myEmployee = context.getBean("myEmployee", Employee.class);
 		
 		System.out.println(myEmployee.getTasks());
+		System.out.println(myEmployee.getReport());
 		
 		context.close();
 	}

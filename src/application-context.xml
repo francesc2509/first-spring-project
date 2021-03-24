@@ -8,5 +8,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
-	<bean id="myEmployee" class="com.springcourse.ioc.Director" />
+	<bean id="myReportBuilder" class="com.springcourse.ioc.ReportBuilderImpl" />
+	<bean id="myEmployee" class="com.springcourse.ioc.Boss">
+		<constructor-arg ref="myReportBuilder"></constructor-arg>
+	</bean>
 </beans>
