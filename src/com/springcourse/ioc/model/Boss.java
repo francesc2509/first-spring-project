@@ -1,4 +1,6 @@
-package com.springcourse.ioc;
+package com.springcourse.ioc.model;
+
+import com.springcourse.ioc.builder.ReportBuilder;
 
 public class Boss implements Employee {
 	

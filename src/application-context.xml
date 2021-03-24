@@ -8,8 +8,14 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
-	<bean id="myReportBuilder" class="com.springcourse.ioc.ReportBuilderImpl" />
-	<bean id="myEmployee" class="com.springcourse.ioc.Boss">
+	<bean id="myReportBuilder" class="com.springcourse.ioc.builder.ReportBuilderImpl" />
+	<bean id="myEmployee" class="com.springcourse.ioc.model.Boss">
 		<constructor-arg ref="myReportBuilder"></constructor-arg>
+	</bean>
+	
+	<bean id="mySecretary" class="com.springcourse.ioc.model.Secretary">
+		<constructor-arg ref="myReportBuilder"></constructor-arg>
+		<property name="email" value="secretary@email.com"/>
+		<property name="companyName" value="MyCompany" />
 	</bean>
 </beans>
