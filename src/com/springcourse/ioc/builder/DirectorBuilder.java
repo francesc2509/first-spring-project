@@ -1,11 +1,11 @@
-package com.springcourse.ioc.model;
+package com.springcourse.ioc.builder;
 
-import com.springcourse.ioc.builder.ReportBuilder;
+import com.springcourse.ioc.model.EmployeeImpl;
 
-public class Director implements Employee {
+public class DirectorBuilder extends EmployeeImpl {
 	private ReportBuilder reportBuilder;
 	
-	public Director(ReportBuilder reportBuilder) {
+	public DirectorBuilder(ReportBuilder reportBuilder) {
 		this.reportBuilder = reportBuilder;
 	}
 	

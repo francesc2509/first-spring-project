@@ -9,7 +9,7 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 	<bean id="myReportBuilder" class="com.springcourse.ioc.builder.ReportBuilderImpl" />
-	<bean id="mySecretary" class="com.springcourse.ioc.model.Secretary" scope="prototype">
+	<bean id="mySecretary" class="com.springcourse.ioc.builder.SecretaryBuilder" scope="prototype">
 		<constructor-arg ref="myReportBuilder"></constructor-arg>
 	</bean>
 </beans>

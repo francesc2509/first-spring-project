@@ -10,7 +10,7 @@
 ">
 	<context:property-placeholder location="classpath:employee.properties" />
 	<bean id="myReportBuilder" class="com.springcourse.ioc.builder.ReportBuilderImpl" />
-	<bean id="myBoss" class="com.springcourse.ioc.model.Boss" init-method="init" destroy-method="destroy">
+	<bean id="myBoss" class="com.springcourse.ioc.builder.BossBuilder" init-method="init" destroy-method="destroy">
 		<constructor-arg ref="myReportBuilder"></constructor-arg>
 		<property name="email" value="${email}" />
 		<property name="companyName" value="${company}" />

@@ -1,17 +1,11 @@
-package com.springcourse.ioc.model;
+package com.springcourse.ioc.builder;
 
-import com.springcourse.ioc.builder.ReportBuilder;
+import com.springcourse.ioc.model.EmployeeImpl;
 
-public class Secretary implements Employee {
-	
-	private String email;
-	private String companyName;
-	private ReportBuilder reportBuilder;
-	
-	public Secretary(ReportBuilder reportBuilder) {
+public class SecretaryBuilder extends EmployeeImpl {
+	public SecretaryBuilder(ReportBuilder reportBuilder) {
 		this.reportBuilder = reportBuilder;
 	}
-	
 	
 	public String getEmail() {
 		return email;

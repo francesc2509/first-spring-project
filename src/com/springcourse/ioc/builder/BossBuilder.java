@@ -1,13 +1,8 @@
-package com.springcourse.ioc.model;
+package com.springcourse.ioc.builder;
 
-import com.springcourse.ioc.builder.ReportBuilder;
+import com.springcourse.ioc.model.EmployeeImpl;
 
-public class Boss implements Employee {
-	
-	private String email;
-	private String companyName;
-	private ReportBuilder reportBuilder;
-	
+public class BossBuilder extends EmployeeImpl {
 	public String getEmail() {
 		return email;
 	}
@@ -24,7 +19,7 @@ public class Boss implements Employee {
 		this.companyName = companyName;
 	}
 	
-	public Boss(ReportBuilder reportBuilder) {
+	public BossBuilder(ReportBuilder reportBuilder) {
 		this.reportBuilder = reportBuilder;
 	}
 	
